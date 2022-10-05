@@ -21,15 +21,13 @@
  * 
  */
 class PID_Controller {
-    public:
-        
+ public:
         /**
         * @brief Construct a new pid controller object with default
         Kp, Kd, Ki and time step.
         * 
         */
         PID_Controller();
-        
         /**
          * @brief Construct a new pid controller object with user given
          * gains and time steps
@@ -59,11 +57,11 @@ class PID_Controller {
          */
         double compute_pid(double present_vel, double req_vel);
 
-    private:
-        double kp; // Proportional Gain
-        double ki; // Integral Gain
-        double kd; // Derivative Gain
-        double required_vel; // Target velocity
-        double initial_vel; // Initial Velocity
-        double time_step; // Time interval to compute PID
+ private:
+        double kp;  // Proportional Gain
+        double ki;  // Integral Gain
+        double kd;  // Derivative Gain
+        double required_vel;  // Target velocity
+        double initial_vel;  // Initial Velocity
+        double time_step;  // Time interval to compute PID
 };
